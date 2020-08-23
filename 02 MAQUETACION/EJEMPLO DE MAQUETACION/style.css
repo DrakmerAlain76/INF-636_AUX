@@ -1,0 +1,41 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*MAQUETACION */
+header{
+    background-color: crimson;
+    width: 100%;
+    height: 100px;
+    
+    display: block;
+
+}
+
+section{
+    background-color: chartreuse;
+    height: 600px;
+    width: 80%;
+    
+    float: right;
+}
+
+article{
+    background-color: yellow;
+    height: 600px;
+    width: 20%;
+    
+    float: right;
+}
+.limpiador{
+    clear: both;
+}
+footer{
+    background-color:blueviolet;
+    width: 100%;
+    height: 80px;
+    display: block;
+
+}

@@ -1,0 +1,45 @@
+*{
+    /* background-color: aqua; */
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+    /* background-color: blue; */
+}
+
+h1{
+    color: rgb(171,105,0);/*color de la letra*/
+    background-color: rgb(193, 250, 60);/*color de fondo*/
+    /* width: 100%;el ancho */
+    height: 85px;/*alto*/
+    /* padding: 70px; /*metodo shorthand */
+    /*propiedad extendida*/
+    /*padding-top: 17px;/*relleno arriba*/
+    /*padding-right: 5px;/*relleno derecha*/
+    /*padding-bottom: 20px ;/*relleno inferior*/
+    /*padding-left: 30px ;/*relleno izquierda*/
+
+    margin: 15px;
+    /* margin-top: 15px; /*margen en lo mas alto (arriba)*/
+    /*  margin-left: 15px; /*margen en la izquienda*/
+    /*  margin-bottom: 15px; /*margen en en lo profundo (abajo)*/
+    /* margin-right: 15px; /* margen en la derecha*/
+
+    
+    border: 15px inset  rgb(255, 157, 0);
+    /*ESTILOS CONTENIDO*/
+    font-size: 5em;/*tamaño de letra*/
+    text-decoration: none;/*decoracion de letra (agrega linea)*/
+    text-transform: capitalize ;/*tipo de letra (mayusculas minusculas)*/
+    text-shadow: 2px 2px 12px #703efa; /*sombra en el texto tiene cuatro valores el primero eje x el segundo eje y el tercero difuminado el cuarto color*/
+    box-shadow: 6px 6px 12px #6231e9 inset, 6px 6px 12px #110b20,16px 16px 12px #171225;/*sombra en la caja tiene cuatro valores el primero eje x el segundo eje y el tercero difuminado el cuarto color*/
+    /* inset para invertir la sombra */
+    text-align: center; /*aliniacion de texto*/
+    font-family: sans-serif; /*tipo de fuente de letras*/
+    font-weight: 100px; /*alto de fuente de letras*/
+    word-spacing: 7px; /*espacio entre palabras*/
+    letter-spacing: 3px; /*espacios entre letras*/
+
+}
