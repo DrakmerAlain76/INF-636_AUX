@@ -1,0 +1,27 @@
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+header{
+    display:flex; /* propiedad flexbox*/
+}
+
+section{
+    /*caja hija de flexbox*/
+    color: #19478E;
+    width: 33%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px; 
+}
+
+section img{
+    width: 100px;
+    height: 282px;
+}
+
+section p{
+    text-align: justify;
+} 
