@@ -1,0 +1,347 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: Arial;
+    letter-spacing: 0px
+}
+/* NAVEGACION Y HEADER*/
+.logo{
+    height: 95px;
+    border-bottom: 1px solid rgb(229,229,229);
+
+}
+.logo>img{
+    width: 205px;
+    height: 55px;
+    padding-left: 105px;
+    padding-top:15px;
+}
+ul{
+    display: inline;
+    /* background-color: red; */
+    /* margin-top:15px;     */
+    
+}
+nav ul li {
+    display: inline-block;
+    padding: 12px;
+    margin:10px;
+}
+nav a{
+    text-decoration: none;
+    font-weight:bold;
+    color:rgb(68,68,68);
+    /* padding: 0px;
+    padding: 15px; */
+    margin:0px;
+    font-size: 15px;
+
+}
+nav a:hover{
+    text-decoration: solid;
+    color: rgb(25,71,142);
+    border-bottom: 3px solid rgb(25,71,142);
+
+}
+nav ul li:first-child{
+    display: inline;
+    padding-left: 80px;
+}
+nav{
+    border-bottom: 1px solid rgb(229,229,229);
+}
+/*logo2*/
+.logo2{
+    display: block;
+    background-image: url("img/inicio-fondo.png");
+    /* background-color:brown; */
+    /* width: 100%; */
+    height: 660px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  position: relative;
+}
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 37%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: rgb(141, 24, 24);
+    font-size: 30px;
+  }
+.hero-text .letra1{
+    color: rgb(34,34,34);
+}
+.hero-text .letra2{
+    color: rgb(25,71,142);
+}
+/* CAJAS CENTRALES */
+
+#tres_cajas{
+    text-align: center;
+    /* position: absolute; */
+    transform: translate(0%, -11%);
+}
+
+
+#tres_cajas div{
+    display: inline-block;
+    color: white;
+    padding: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 378px;
+    
+}
+
+
+#tres_cajas .uno{
+    background-color: rgb(25,71,142);
+    
+}
+
+#tres_cajas .dos{
+    background-color: rgb(42,62,134);
+    margin-right: -5px;
+    margin-left: -6px;
+}
+
+#tres_cajas .tres{
+    background-color: rgb(44,45,120);
+    
+}
+
+#tres_cajas .uno:hover{
+    padding: 80px;
+    
+}
+
+#tres_cajas .dos:hover{
+    padding: 80px;
+    
+}
+
+#tres_cajas .tres:hover{
+    padding: 80px;
+    
+}
+#tres_cajas div a{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight:bold;
+    border: 2px solid white;
+    margin-top: 35px !important;
+    font-size: 12px;
+}
+
+#tres_cajas div a .uno{
+    background-color: rgb(25,71,142);
+}
+
+#tres_cajas div a .dos{
+    background-color: rgb(42,62,134);
+}
+
+#tres_cajas div a .tres{
+    background-color: rgb(44,45,120);
+}
+
+#tres_cajas h1{
+    margin-bottom: 10px;
+}
+
+#tres_cajas .caja .abajo{
+    margin-bottom: 28px;
+}
+
+#tres_cajas .uno a:hover{
+    background-color:white;
+    color: rgb(25,71,142);
+    border: 2px solid rgb(25,71,142);
+}
+
+#tres_cajas .dos a:hover{
+    background-color:white;
+    color: rgb(42,62,134);
+    border: 2px solid rgb(42,62,134);
+}
+
+#tres_cajas  .tres a:hover{
+    background-color:white;
+    color: rgb(44,45,120);
+    border: 2px solid rgb(44,45,120);
+}
+
+/* COMENTARIO CENTRAL*/
+
+.comentario p{
+    font-weight:bold;
+    color: rgb(68,68,68);
+    text-align: center;
+    margin:7px;
+    
+}
+.comentario div{
+    padding: 50px;
+}
+
+.imagen2 {
+    display: block;
+    background-image: url("img/mejoramos-su-productividad.png");
+    
+    background-position: 30% 35%;
+    width: 100%;
+    height: 384px;
+    
+}
+
+.imagen2 h1{
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 13%;
+}
+/* INFORMACION */
+.informacion{
+    margin-top:50px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom:50px;
+    box-sizing: content-box;
+    display: flex;
+}
+/*separar de las letras*/
+.informacion .info{
+    /* display: inline-block; */
+    /* text-align: center; */
+    box-sizing: border-box;
+    padding-top:0px;
+    height: 495px;
+    margin: 0px 15px 0px 15px;
+    box-sizing: content-box;
+}
+
+.informacion .one, .two, .tree{
+    text-align: center;
+}
+
+.imag_i:hover{
+box-shadow: -5px 5px 8px #222222;
+
+}
+
+.informacion .info>img{
+    width: 267px;
+    height: 298px;
+}
+
+.informacion .cuatro{
+    width: 267px;
+    height: 495px;
+    background-color: rgb(237,237,237);
+    border: 1px solid rgb(213,213,213);
+    border-bottom: 1px solid rgb(213,213,213);
+}
+.informacion h4{
+    color: rgb(25,71,171);
+    font-size: 1.3em;
+    font-weight: 540;
+}
+
+.informacion .info .coment{
+    color: rgb(68,68,68);
+    width: 267px;
+    font-size: 16px;
+    line-height: 1.6;
+    
+}
+
+/**horario*/
+.cuatro{
+padding: 17px;    
+}
+
+.horarios #titu_ho{
+    color: rgb(25,71,142);
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.8em;
+}
+.horarios .d_h{
+    font-size: 13px;
+
+}
+
+.horarios .hors{
+    padding-top:20px;
+    padding-bottom:28px;
+    /* padding-top:17px;
+    padding-bottom:17px; */
+    border-bottom: 1px solid rgb(213,213,213);
+}
+
+.horarios .hors:last-child{
+    border-bottom:none;
+}
+
+
+.horarios .dia{
+    float: left;
+    color: rgb(68,68,68);
+    text-align: left !important;
+    font-weight: bold;
+    /* justify-items: flex-end; */
+    /* height: %; */
+    /* width: 40%; */
+    
+    
+}
+.horarios .hora{
+    float: right;
+    color: rgb(68,68,68);
+    text-align: left !important;
+    width: 55%;
+}
+
+/* INFORMACION ADICIONAL */
+
+#info_add{
+    width: 100%;
+    height: 313px;
+    background-color:rgb(42,62,134) ;
+    display: flex;
+}
+
+#info_add .im_add{
+    width: 230px;
+    height: 60px;
+}
+
+#info_add .caja{
+    color: white;
+    padding: 66px;
+    line-height: 1.8;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background-color: rgb(44,45,120);
+    color: white;
+    height: 50px;
+}
+
+footer .pie_p{
+    font-weight: bold;
+    padding: 20px 0px 12px 95px;
+    
+}
