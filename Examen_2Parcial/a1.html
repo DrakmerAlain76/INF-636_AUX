@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Segundo Parcial</title>
+</head>
+<body>
+    <h1 style="text-align: center;">EXAMEN SEGUNDO PARCIAL</h1>
+    <section style="text-align: center;">
+        <h2>Pregunta 1</h2>
+        <label for="user">Nombre de usuario:</label>
+        <input type="text" id="user"  onkeyup="this.value = validation_text(this.value)" onblur="validation_user()">
+            <br>
+        <div id="msg-user"></div>
+            <BR>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" onblur="validation_password()">
+            <br>
+        <div id="msg-pass"></div>
+            <BR>
+        <label for="confirm_password" >Confirmar Contraseña:</label>
+        <input type="password" id="confirm_password" onblur="validation_confirm_password()">
+            <br>
+        <div id="msg-c-pass"></div>
+            <BR>
+        <label for="email">Correo Electronico:</label>
+            <input type="text" id="email"  onkeyup="validation_email(this.value)" >
+            <br>
+        <div id="msg-email"></div>
+            <BR>
+            <br>
+    </section>
+    <section style="text-align: center;">
+
+        <h2>Pregunta 2</h2>
+        <label for="textEval">Ingrese cadena:</label>
+        <input type="text" id="textEval">
+        <button onclick="text_eval()">EVALUAR</button>
+        <div id="resp"></div>
+    </section>
+
+    <script >
+            var numbers = '0123456789';
+            function validation_text(text){
+                var out = '';
+                var filter = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890_-';
+                //var filter = 'abcd';
+                for (var i=0; i<text.length; i++)
+                if (filter.indexOf(text.charAt(i)) != -1) 
+                out += text.charAt(i);
+                return out;
+            }
+            function validation_user(){
+                var text  = document.getElementById('user');
+                let msg = document.getElementById('msg-user');
+                let cad = "_-"
+                if(numbers.indexOf(text.value.charAt(0)) != -1){//charAt(0) es un numero, tiene que ser diferente
+                    msg.innerHTML = 'El nombre de usuario no puede empezar con numero';
+                text.focus();
+            }
+            else if(cad.indexOf(text.value.charAt(text.value.length-1)) != -1){
+                msg.innerHTML = 'El nombre de usuario no puede terminar con caracteres especiales';
+                text.focus();
+            }
+            else if(text.value.length < 4 || text.value.length > 10){
+                msg.innerHTML = 'el usuario tiene que tener 4 caracteres como mínimo y 10 como máximo';
+                text.focus();
+            }
+            else{
+                msg.innerHTML = '';
+            }
+        }
+        function validation_password(){
+            var password = document.getElementById('password');
+            
+            let msg = document.getElementById('msg-pass');
+            if(password.value.length < 5 || password.value.length > 15 ){
+                msg.innerHTML = 'la contraseña tiene que tener 5 caracteres como mínimo y 15 como máximo';
+                password.focus();
+            }
+            else{
+                msg.innerHTML = '';
+            }
+        }
+        function validation_confirm_password(){
+            let pass = document.getElementById('password');
+            let con_pass = document.getElementById('confirm_password');
+            let msg = document.getElementById('msg-c-pass');
+            if(pass.value == con_pass.value){
+                msg.innerHTML = '';
+            }
+            //a===A  a!=A
+
+            else{
+                msg.innerHTML = 'no coinciden las contraseñas';
+                con_pass.focus();
+            }
+        }
+        function validation_email(text){
+            regex = /^[-\w.%+]{4,64}@(?:[A-Z0-9-]{3,63}\.){1,125}[A-Z]{2,63}$/i;//exprecion regular 
+            msg = document.getElementById('msg-email');
+            if(!regex.test(text)){
+                msg.innerHTML = 'Formato de email incorrecto';
+            }
+            else{
+                msg.innerHTML = '';
+            }
+        }
+    </script>
+
+    <script>
+        function text_eval(){
+            string = document.getElementById('textEval').value;
+            resp = document.getElementById('resp');
+            count_number = count_numbers(string);
+            count_letter = count_letters(string);
+            count_space = count_spaces(string);
+            change_value_text = change_value(string);
+            resp.innerHTML = 'Cantidad de numeros: '+count_number+"\n"+
+                                'Cantidad de letras: '+count_letter+"\n"+
+                                'Cantidad de espacios: '+count_space+"\n"+
+                                'Cambio de la cadena: '+change_value_text+"\n";
+        }
+        function count_numbers(string){
+            numbers = '1234567890';
+            return count(string, numbers);
+        }
+        function count_letters(string){
+            letters ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            return count(string, letters);
+        }
+        function count_spaces(string){
+            space = ' ';
+            return count(string, space);
+        }
+        function change_value(string){
+            center = string.substring(2,string.length-2);
+            return 'ZZ'+center+'ZZ';
+        }
+        function count(string, filter){
+            let c = 0;
+            for (let index = 0; index < string.length; index++) {
+                if(filter.indexOf(string.charAt(index) ) != -1)
+                    c++;
+            }
+            return c;
+        }
+    </script>
+</body>
+</html>
